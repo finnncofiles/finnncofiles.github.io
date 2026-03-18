@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finnnco Tools</title>
+
+<style>
+:root {
+  --bg: #111513;
+  --card: #202721;
+  --text: #e7ebe5;
+  --muted: #a7b0a5;
+  --accent: #7b8a63;
+  --border: #313930;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 16px;
+}
+
+.app {
+  max-width: 480px;
+  margin: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.lang {
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.02);
+}
+
+.lang button {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang .active {
+  background: var(--accent);
+  color: #000;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.summary {
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button-muted {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+<div class="app">
+
+  <div class="topbar">
+    <div>
+      <h1 id="title">Finnnco Tools</h1>
+      <div class="sub" id="subtitle">Landing page for Finnnco tools</div>
+    </div>
+    <div class="lang">
+      <button id="btn-fi" class="active" type="button">FI</button>
+      <button id="btn-en" type="button">EN</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title" id="sectionTitle">Työkalut</h2>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Kuorma+</h2>
+          <div class="desc" id="kuormaDesc">Kuorman hallinta ja omavaraisuus</div>
+        </div>
+        <div class="badge" id="kuormaBadge">Voi toimia offline</div>
+      </div>
+      <div class="summary" id="kuormaSummary">
+        Kuorma+ auttaa tekemään kuormasta järkevän. Mitä oikeasti tarvitaan, mitä kannattaa kantaa ja mikä on vain turhaa painoa.
+      </div>
+      <a class="button" href="./kuorma-plus/" id="kuormaButton">Avaa työkalu</a>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>Hetki+</h2>
+          <div class="desc" id="hetkiDesc">Tilannekuva</div>
+        </div>
+        <div class="badge" id="hetkiBadge">Vain internetyhteydellä</div>
+      </div>
+      <div class="summary" id="hetkiSummary">
+        Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä.
+      </div>
+      <a class="button" href="./hetki-plus/" id="hetkiButton">Avaa työkalu</a>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <h2>PCC Tool</h2>
+          <div class="desc" id="pccDesc">Ennakkotarkastukset ennen toimintaa</div>
+        </div>
+        <div class="badge" id="pccBadge">Tulossa</div>
+      </div>
+      <div class="summary" id="pccSummary">
+        PCC Tool on viimeinen tarkistus ennen toimintaa, jotta perusasiat eivät jää tekemättä.
+      </div>
+      <div class="button button-muted" id="pccButton">Tulossa</div>
+    </div>
+  </div>
+
+  <div class="footer" id="footer">Finnnco Tools</div>
+</div>
+
+<script>
+const copy = {
+  fi: {
+    subtitle: "Finnncon työkalujen tulosivu",
+    sectionTitle: "Työkalut",
+    kuormaDesc: "Kuorman hallinta ja omavaraisuus",
+    kuormaBadge: "Voi toimia offline",
+    kuormaSummary: "Kuorma+ auttaa tekemään kuormasta järkevän. Mitä oikeasti tarvitaan, mitä kannattaa kantaa ja mikä on vain turhaa painoa.",
+    kuormaButton: "Avaa työkalu",
+    hetkiDesc: "Tilannekuva",
+    hetkiBadge: "Vain internetyhteydellä",
+    hetkiSummary: "Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä.",
+    hetkiButton: "Avaa työkalu",
+    pccDesc: "Ennakkotarkastukset ennen toimintaa",
+    pccBadge: "Tulossa",
+    pccSummary: "PCC Tool on viimeinen tarkistus ennen toimintaa, jotta perusasiat eivät jää tekemättä.",
+    pccButton: "Tulossa",
+    footer: "Finnnco Tools"
+  },
+  en: {
+    subtitle: "Landing page for Finnnco tools",
+    sectionTitle: "Tools",
+    kuormaDesc: "Load management and sustainment",
+    kuormaBadge: "Can work offline",
+    kuormaSummary: "Kuorma+ helps make the load sensible. What is actually needed, what is worth carrying and what is just dead weight.",
+    kuormaButton: "Open tool",
+    hetkiDesc: "Situation awareness",
+    hetkiBadge: "Internet connection required",
+    hetkiSummary: "Hetki+ brings key information together so the situation is quicker to understand without extra friction.",
+    hetkiButton: "Open tool",
+    pccDesc: "Pre-combat checks before action",
+    pccBadge: "Soon",
+    pccSummary: "PCC Tool is the final check before action so the basics do not get missed.",
+    pccButton: "Coming soon",
+    footer: "Finnnco Tools"
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.getElementById('btn-fi').classList.toggle('active', lang === 'fi');
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+  const t = copy[lang];
+  Object.keys(t).forEach(key => {
+    const el = document.getElementById(key);
+    if (el) el.textContent = t[key];
+  });
+}
+
+document.getElementById('btn-fi').addEventListener('click', () => setLang('fi'));
+document.getElementById('btn-en').addEventListener('click', () => setLang('en'));
+
+setLang('fi');
+</script>
+
+</body>
+</html>
