@@ -137,13 +137,23 @@ h1 {
   border: 1px solid var(--border);
 }
 
+.info-box {
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.02);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 .footer {
   margin-top: 18px;
   font-size: 12px;
   color: var(--muted);
   text-align: center;
 }
-
 </style>
 </head>
 
@@ -170,7 +180,7 @@ h1 {
           <h2>Kuorma+</h2>
           <div class="desc" id="kuormaDesc">Kuorman hallinta ja omavaraisuus</div>
         </div>
-        <div class="badge" id="kuormaBadge">Voi toimia offline</div>
+        <div class="badge" id="kuormaBadge">Soveltuu operatiiviseen käyttöön</div>
       </div>
       <div class="summary" id="kuormaSummary">
         Kuorma+ auttaa tekemään kuormasta järkevän. Mitä oikeasti tarvitaan, mitä kannattaa kantaa ja mikä on vain turhaa painoa.
@@ -182,12 +192,12 @@ h1 {
       <div class="card-head">
         <div>
           <h2>Hetki+</h2>
-          <div class="desc" id="hetkiDesc">Tilannekuva</div>
+          <div class="desc" id="hetkiDesc">Tilannekuva ja olosuhdeikkunat</div>
         </div>
-        <div class="badge" id="hetkiBadge">Vain internetyhteydellä</div>
+        <div class="badge" id="hetkiBadge">Rajoitetusti operatiivinen</div>
       </div>
       <div class="summary" id="hetkiSummary">
-        Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä.
+        Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä. Soveltuvuus riippuu datalähteistä ja yhteyksistä.
       </div>
       <a class="button" href="./hetki-plus/" id="hetkiButton">Avaa työkalu</a>
     </div>
@@ -195,16 +205,20 @@ h1 {
     <div class="card">
       <div class="card-head">
         <div>
-          <h2>PCC Tool</h2>
-          <div class="desc" id="pccDesc">Ennakkotarkastukset ennen toimintaa</div>
+          <h2>Katve+</h2>
+          <div class="desc" id="katveDesc">Suunnistus ja liikkuminen uhan alla</div>
         </div>
-        <div class="badge" id="pccBadge">Tulossa</div>
+        <div class="badge" id="katveBadge">Vain harjoitteluun</div>
       </div>
-      <div class="summary" id="pccSummary">
-        PCC Tool on viimeinen tarkistus ennen toimintaa, jotta perusasiat eivät jää tekemättä.
+      <div class="summary" id="katveSummary">
+        Katve+ lisää suunnistukseen kitkaa ja ulottuvuutta. Käyttäjä luo reitin, jonka ympärille syntyy AO, uhkia ja epävarmuutta liikkumiseen. Työkalu on tarkoitettu harjoitteluun, ei operatiiviseen käyttöön.
       </div>
-      <div class="button button-muted" id="pccButton">Tulossa</div>
+      <a class="button" href="./katve-plus/" id="katveButton">Avaa työkalu</a>
     </div>
+  </div>
+
+  <div class="info-box" id="infoBox">
+    Finnnco Tools kokoaa kevyitä mobiiliystävällisiä työkaluja, joiden idea on ratkaista yksi rajattu ongelma kerrallaan. Tavoitteena on nopea käyttö, selkeä käyttöliittymä ja toimivuus puhelimella. Osa työkaluista voi tukea operatiivista käyttöä, osa on selvästi harjoitteluun tarkoitettuja.
   </div>
 
   <div class="footer" id="footer">Finnnco Tools</div>
@@ -216,34 +230,36 @@ const copy = {
     subtitle: "Finnncon työkalujen tulosivu",
     sectionTitle: "Työkalut",
     kuormaDesc: "Kuorman hallinta ja omavaraisuus",
-    kuormaBadge: "Voi toimia offline",
+    kuormaBadge: "Soveltuu operatiiviseen käyttöön",
     kuormaSummary: "Kuorma+ auttaa tekemään kuormasta järkevän. Mitä oikeasti tarvitaan, mitä kannattaa kantaa ja mikä on vain turhaa painoa.",
     kuormaButton: "Avaa työkalu",
-    hetkiDesc: "Tilannekuva",
-    hetkiBadge: "Vain internetyhteydellä",
-    hetkiSummary: "Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä.",
+    hetkiDesc: "Tilannekuva ja olosuhdeikkunat",
+    hetkiBadge: "Rajoitetusti operatiivinen",
+    hetkiSummary: "Hetki+ kokoaa olennaisen tiedon yhteen, jotta tilanne on nopeasti ymmärrettävissä ilman turhaa säätöä. Soveltuvuus riippuu datalähteistä ja yhteyksistä.",
     hetkiButton: "Avaa työkalu",
-    pccDesc: "Ennakkotarkastukset ennen toimintaa",
-    pccBadge: "Tulossa",
-    pccSummary: "PCC Tool on viimeinen tarkistus ennen toimintaa, jotta perusasiat eivät jää tekemättä.",
-    pccButton: "Tulossa",
+    katveDesc: "Suunnistus ja liikkuminen uhan alla",
+    katveBadge: "Vain harjoitteluun",
+    katveSummary: "Katve+ lisää suunnistukseen kitkaa ja ulottuvuutta. Käyttäjä luo reitin, jonka ympärille syntyy AO, uhkia ja epävarmuutta liikkumiseen. Työkalu on tarkoitettu harjoitteluun, ei operatiiviseen käyttöön.",
+    katveButton: "Avaa työkalu",
+    infoBox: "Finnnco Tools kokoaa kevyitä mobiiliystävällisiä työkaluja, joiden idea on ratkaista yksi rajattu ongelma kerrallaan. Tavoitteena on nopea käyttö, selkeä käyttöliittymä ja toimivuus puhelimella. Osa työkaluista voi tukea operatiivista käyttöä, osa on selvästi harjoitteluun tarkoitettuja.",
     footer: "Finnnco Tools"
   },
   en: {
     subtitle: "Landing page for Finnnco tools",
     sectionTitle: "Tools",
     kuormaDesc: "Load management and sustainment",
-    kuormaBadge: "Can work offline",
+    kuormaBadge: "Operationally suitable",
     kuormaSummary: "Kuorma+ helps make the load sensible. What is actually needed, what is worth carrying and what is just dead weight.",
     kuormaButton: "Open tool",
-    hetkiDesc: "Situation awareness",
-    hetkiBadge: "Internet connection required",
-    hetkiSummary: "Hetki+ brings key information together so the situation is quicker to understand without extra friction.",
+    hetkiDesc: "Situation picture and timing windows",
+    hetkiBadge: "Operationally limited",
+    hetkiSummary: "Hetki+ brings key information together so the situation is quicker to understand without extra friction. Suitability depends on data sources and connectivity.",
     hetkiButton: "Open tool",
-    pccDesc: "Pre-combat checks before action",
-    pccBadge: "Soon",
-    pccSummary: "PCC Tool is the final check before action so the basics do not get missed.",
-    pccButton: "Coming soon",
+    katveDesc: "Navigation and movement under threat",
+    katveBadge: "Training only",
+    katveSummary: "Katve+ adds friction and depth to navigation. The user creates a route around which AO, threats and uncertainty affect movement. The tool is for training use, not operational use.",
+    katveButton: "Open tool",
+    infoBox: "Finnnco Tools collects lightweight mobile-friendly tools designed to solve one clearly limited problem at a time. The aim is fast use, clear UI and practical phone-first functionality. Some tools may support operational use, while others are clearly for training only.",
     footer: "Finnnco Tools"
   }
 };
