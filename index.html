@@ -101,6 +101,9 @@
       font-size: 15px;
     }
 
+    .publications { margin-top: 26px; }
+    .publications .card { min-height: 0; }
+
     .section-title {
       margin: 0 0 12px;
       font-size: 18px;
@@ -216,7 +219,7 @@
     <div class="topbar">
       <div class="brand">
         <h1>Finnnco Tools</h1>
-        <p id="introLine">Kevyitä mobiiliystävällisiä työkaluja yhteen rajattuun ongelmaan kerrallaan.</p>
+        <p id="introLine">Mobiiliystävällisiä työkaluja, oppaita ja julkaisuja.</p>
       </div>
       <div class="lang-switch" aria-label="Language selector">
         <button class="active" data-lang="fi">FI</button>
@@ -283,13 +286,35 @@
       </article>
     </div>
 
+    <section class="publications" aria-labelledby="publicationsTitle">
+      <h2 class="section-title" id="publicationsTitle" data-i18n="publicationsTitle">Oppaat ja julkaisut</h2>
+      <div class="grid">
+        <article class="card">
+          <h3 data-i18n="m85.title">Kantolaitejärjestelmä 85</h3>
+          <div class="subtitle" data-i18n="m85.subtitle">Suomalaista varustehistoriaa</div>
+          <div class="badge" data-i18n="m85.format">PDF · A4 · Suomi</div>
+          <p data-i18n="m85.desc">M85-kantolaitejärjestelmän dokumentointia ja vanhan varustetiedon säilyttämistä. Epävirallinen julkaisu.</p>
+          <div class="actions">
+            <!-- Julkaisulinkki lisätään, kun julkinen PDF-versio ja julkaisuoikeudet on tarkistettu. -->
+            <span class="btn disabled" aria-disabled="true" data-i18n="m85.status">Julkaisu valmisteilla</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <div class="footer" id="footerText">Finnnco Tools kokoaa kevyitä mobiiliystävällisiä työkaluja, joiden painopiste on nopeassa käytössä, selkeässä käyttöliittymässä ja puhelimella toimimisessa.</div>
   </div>
 
   <script>
     const translations = {
       fi: {
-        introLine: 'Kevyitä mobiiliystävällisiä työkaluja yhteen rajattuun ongelmaan kerrallaan.',
+        "publicationsTitle": "Oppaat ja julkaisut",
+        "m85.title": "Kantolaitejärjestelmä 85",
+        "m85.subtitle": "Suomalaista varustehistoriaa",
+        "m85.format": "PDF · A4 · Suomi",
+        "m85.desc": "M85-kantolaitejärjestelmän dokumentointia ja vanhan varustetiedon säilyttämistä. Epävirallinen julkaisu.",
+        "m85.status": "Julkaisu valmisteilla",
+        introLine: 'Mobiiliystävällisiä työkaluja, oppaita ja julkaisuja.',
         heroText: 'Finnnco Tools kokoaa kevyitä mobiiliystävällisiä työkaluja, joiden idea on ratkaista yksi rajattu ongelma kerrallaan. Tavoitteena on nopea käyttö, selkeä käyttöliittymä ja toimivuus puhelimella. Osa työkaluista voi tukea operatiivista käyttöä, osa on selvästi harjoitteluun tarkoitettuja.',
         toolsTitle: 'Työkalut',
         openTool: 'Avaa työkalu',
@@ -312,7 +337,13 @@
         footerText: 'Finnnco Tools kokoaa kevyitä mobiiliystävällisiä työkaluja, joiden painopiste on nopeassa käytössä, selkeässä käyttöliittymässä ja puhelimella toimimisessa.'
       },
       en: {
-        introLine: 'Light mobile-friendly tools focused on one clearly limited problem at a time.',
+        "publicationsTitle": "Guides and publications",
+        "m85.title": "M85 load-carrying system",
+        "m85.subtitle": "Finnish equipment history",
+        "m85.format": "PDF · A4 · Finnish",
+        "m85.desc": "Documentation of the M85 load-carrying system and preservation of historical equipment knowledge. Unofficial publication.",
+        "m85.status": "Publication in preparation",
+        introLine: 'Mobile-friendly tools, guides and publications.',
         heroText: 'Finnnco Tools brings together lightweight mobile-friendly tools built to solve one defined problem at a time. The goal is fast use, a clear interface, and reliable phone usability. Some tools may support operational use, while others are clearly intended for training.',
         toolsTitle: 'Tools',
         openTool: 'Open tool',
@@ -335,7 +366,13 @@
         footerText: 'Finnnco Tools brings together lightweight mobile-friendly tools focused on fast use, a clear interface, and practical phone usability.'
       },
       uk: {
-        introLine: 'Легкі мобільні інструменти для вирішення однієї чітко обмеженої задачі за раз.',
+        "publicationsTitle": "Посібники та публікації",
+        "m85.title": "Система перенесення спорядження M85",
+        "m85.subtitle": "Історія фінського спорядження",
+        "m85.format": "PDF · A4 · фінською",
+        "m85.desc": "Документування системи перенесення спорядження M85 та збереження історичних відомостей про спорядження. Неофіційна публікація.",
+        "m85.status": "Публікація готується",
+        introLine: 'Мобільні інструменти, посібники та публікації.',
         heroText: 'Finnnco Tools об’єднує легкі мобільні інструменти, створені для вирішення однієї визначеної задачі за раз. Мета полягає у швидкому використанні, зрозумілому інтерфейсі та надійній роботі на телефоні. Частина інструментів може підтримувати оперативне застосування, а частина чітко призначена для навчання.',
         toolsTitle: 'Інструменти',
         openTool: 'Відкрити інструмент',
